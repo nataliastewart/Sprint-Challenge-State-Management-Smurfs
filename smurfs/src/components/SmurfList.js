@@ -5,7 +5,7 @@ import { getSmurfs } from "../actions";
 const SmurfList = (props) => {
   return (
     <div>
-      <p>Click here to get Smurfs! </p>
+      <p>Click on the Smurf to get his friends! </p>
       <img
         className="smurf-img"
         src="https://png2.cleanpng.com/sh/c747b4215c2962c977669116516394ac/L0KzQYi4UcI4N2FmSJGAYUHldYXsUPFma2U9TJC5MUO7R4KBWME2OWI8T6kAMES6QYaCTwBvbz==/5a1be4e0aec484.0138718815117775047159.png"
