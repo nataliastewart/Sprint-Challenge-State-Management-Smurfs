@@ -10,12 +10,6 @@ const SmurfForm = () => {
     height: "",
   });
 
-  //   const handleSubmit =(e) =>{
-  // e.preventDefault();
-  // const onSubmit = {
-  //   setFormState(dispatch({type: "SUBMITTED_FORM", payload: props.res.data})
-  // }
-  //   }
   const [post, setPost] = useState([]);
 
   const handleSubmit = (e) => {
@@ -33,11 +27,6 @@ const SmurfForm = () => {
       })
       .catch((err) => console.log("FormSubmit", err.res));
   };
-
-  //   create a submit handler
-  // in your submit handler you will dispatch your post action (which will be available to you via props) and pass the formState values to the post action
-  // 3:58
-  // props.formSubmit(formValues)
 
   const inputChange = (e) => {
     e.persist();

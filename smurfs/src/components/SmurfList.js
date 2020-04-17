@@ -15,7 +15,7 @@ const SmurfList = (props) => {
       <p>Add a new Smurf below</p>
       {props.smurfs.map((smurf) => (
         <div key={smurf.id}>
-          <h2>Name: {smurf.name}</h2>
+          <h3>Name: {smurf.name}</h3>
           <p>Age:{smurf.age}</p>
           <p>Height: {smurf.height}</p>
         </div>
