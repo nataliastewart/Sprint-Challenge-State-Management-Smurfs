@@ -12,6 +12,7 @@ const SmurfList = (props) => {
         alt="cute smurf"
         onClick={() => props.getSmurfs()}
       />
+      <p>Add a new Smurf below</p>
       {props.smurfs.map((smurf) => (
         <div key={smurf.id}>
           <h2>Name: {smurf.name}</h2>

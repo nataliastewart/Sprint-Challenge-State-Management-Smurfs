@@ -19,32 +19,16 @@ export const getSmurfs = () => (dispatch) => {
     });
 };
 
-const formSubmit = (e) => (dispatch) => {
-  e.preventDefault();
+export const formSubmit = (formValues) => (dispatch) => {
+  // e.preventDefault();
   //  dispatch({ type: "SUBMIT_FORM" });
   axios
-    .post("http://localhost:3333/smurfs")
+    .post("http://localhost:3333/smurfs", formValues)
     .then((res) => {
-      //  console.log("RES-POST", res);
+      console.log("RES-POST", res);
       dispatch({ type: "SUBMITTED_FORM", payload: res.data });
     })
     .catch((err) => {
       dispatch({ type: "ERROR_SUBMIT", payload: err.res });
     });
 };
-// axios
-//   .post("", formState)
-//   .then((res) => {
-//     setPost(res.data);
-
-//     setFormState({
-//       name: "",
-//       size: "",
-//       // cheese: "",
-//       // tomato: "",
-//       // pepperoni: "",
-//       // olives: "",
-//       instructions: "",
-//     });
-//   })
-//   .catch((err) => console.log("You form was not submitted", err.response));

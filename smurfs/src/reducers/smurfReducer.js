@@ -3,6 +3,7 @@ import {
   FETCH_SMURFS_SUCCESS,
   FETCH_SMURFS_FAIL,
 } from "../actions";
+import { SUBMITTED_FORM } from "../actions/smurfActions";
 
 //setup my empty reducer and initial state
 
@@ -33,6 +34,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         fetchingSmurfs: false,
         error: action.payload,
+      };
+    case SUBMITTED_FORM:
+      return {
+        ...state,
+        smurfs: action.payload,
       };
     default:
       return state;
